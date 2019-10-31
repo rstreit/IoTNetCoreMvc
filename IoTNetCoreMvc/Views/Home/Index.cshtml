@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-4">Control Panel</h1>
+    <h2 class="mt-4">Data In</h2>
+    <div class="row mt-4 mb-3">
+        <div class="col-lg-6 mb-3">
+            <h2>Input Pino</h2>
+            <br />
+            <img src="~/img/off.png" height="150" class="btn-off" />
+            <img src="~/img/on.png" height="150" class="btn-on" style="display:none" />
+        </div>
+        <div class="col-lg-6 mb-3">
+            <h2>Potenciômetro</h2>
+            <br />
+            <h2 class="potenciometro">-</h2>
+        </div>
+    </div>
+    <hr />
+    <h2 class="mt-4">Data Out</h2>
+    <div class="row mt-4 mb-3">
+        <div class="col-lg-6 mb-3">
+            <h2>Output Pino</h2>
+            <br />
+            <button type="button" class="btn btn-primary btn-liga-led">Liga LED</button>
+        </div>
+        <div class="col-lg-6 mb-3">
+            <h2>Movimenta servo</h2>
+            <br />
+            <div class="slidecontainer">
+                0 <input type="range" min="0" max="180" value="0" class="slider" id="myRange"> 180
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/clientHub.js"></script>
+}
